@@ -1,0 +1,87 @@
+    /* Full-width input fields */
+    
+    form {
+        text-align: center
+    }
+    
+    .signup-link {
+        font-weight: 500;
+    }
+    /* Set a style for all buttons */
+    
+    #reg {
+        background-color: #444444;
+        color: white;
+        cursor: pointer;
+        opacity: 0.9;
+        width: 40%;
+    }
+    
+    #cancel {
+        color: white;
+        cursor: pointer;
+        opacity: 0.9;
+        width: 40%;
+    }
+    
+    @media (min-width: 768px) {
+        .buttons {
+            display: inline;
+        }
+    }
+    
+    button:hover {
+        opacity: 0.7;
+    }
+    
+    .card-panel {
+        box-shadow: rgba(0, 0, 0, 0.1) 0 5px 40px, rgba(0, 0, 0, 0.1) 0 5px 10px;
+        border-bottom: 10px solid transparent;
+        transition: box-shadow 0.25s;
+        padding: 20px;
+        margin: 0.5rem 0 1rem;
+        border-radius: 2px;
+        background-color: #fff;
+    }
+    /* Font Awesome Icons */
+    
+    .form-group a i {
+        font-family: FontAwesome;
+        margin: 0 auto;
+        font-size: 5rem;
+        font-style: normal;
+    }
+    
+    .min-container .card-panel form .fa {
+        top: 20px;
+        right: 1rem;
+    }
+    /* Media Queries */
+    
+    @media (min-width: 768px) {
+        .min-container {
+            max-width: 650px;
+        }
+    }
+    
+    .min-container {
+        margin: 0 auto;
+    }
+    
+    .buttons {
+        display: inline;
+        margin-left: 28px;
+    }
+    
+    #address-header {
+        margin-right: 450px !important;
+        font-weight: 600;
+    }
+    
+    .form-check {
+        margin-right: 400px !important;
+    }
+    
+    .w-50 {
+        height: 85px;
+    }

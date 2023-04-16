@@ -1,0 +1,187 @@
+<div class="row">
+    <div class="col-lg-3">
+        <br>
+        <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+
+            <a class="link" href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+                <i class="fe fe-x"><span class="sr-only"></span></i>
+            </a>
+            <nav class="vertnav navbar navbar-light">
+                <!-- nav bar -->
+                <div class="w-100 mb-4 d-flex">
+                    <div class="profile-pic">
+                        <label class="-label" for="file">
+
+                    <span class="hover-text">Change Image</span>
+                  </label>
+                        <input id="file" type="file" (change)="onFileUpload($event)" accept=".png, .jpg, .jpeg" />
+                        <img src="{{imageUrl}}" id="output" width="200" />
+                    </div>
+                </div>
+                <div class="user-name">
+                    <h6 class="text-center">{{userDetails.firstname}}&nbsp;{{userDetails.lastname}}</h6>
+                    <p class="text-center">{{userDetails.email}}</p>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <p class="text-muted nav-heading mt-4 mb-1">
+                        <span><u>Account Settings</u></span>
+                    </p>
+                    <ul class="navbar-nav flex-fill w-100 mb-2">
+
+
+
+                        <ng-container *ngIf=true>
+                            <li class="nav-item">
+                                <a id="popup" aria-expanded="false" class="nav-link" onclick="user_profile()">
+
+                                    <span class="ml-3 item-text">Change password</span>
+                                </a>
+
+                            </li>
+
+                        </ng-container>
+
+                        <li class="nav-item">
+                            <a (click)="logout()" aria-expanded="false" class="nav-link">
+                                <i class="fe fe-pie-chart fe-16"></i>
+                                <span class="ml-3 item-text">Logout</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+            </nav>
+        </aside>
+
+    </div>
+
+    <div class="col-lg-9">
+        <div class="container" id="userProfile">
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="card flex-row">
+                        <div class="icon bg-color-5 d-flex justify-content-center align-items-center mb-2 ">
+                            <span class="flaticon-shipped"></span>
+                        </div>
+                        <div class="card-body">
+
+                            <a class="link-text">Your orders</a>
+                            <p class="card-text">Track,return or buy things again</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="card flex-row">
+                        <div class="icon bg-color-5 d-flex justify-content-center align-items-center mb-2 ">
+                            <span class="flaticon-award"></span>
+                        </div>
+                        <div class="card-body">
+                            <a class="link-text">Your payments</a>
+
+                            <p class="card-text">Manage payment methods and settings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="card flex-row">
+                        <div class="icon bg-color-5 d-flex justify-content-center align-items-center mb-2 ">
+                            <span class="flaticon-customer-service"></span>
+                        </div>
+                        <div class="card-body">
+                            <a class="link-text" routerLink="/contact">Customer Support</a>
+
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="card card-body">
+                        <h6 class="card-title h6 h6-sm">Ordering and shopping preferences</h6>
+                        <hr>
+                        <a class="text-secondary">Your Transactions</a>
+                        <a class="text-secondary">Your Addresses</a>
+                        <a class="text-secondary">Your Payments</a>
+                        <a class="text-secondary">Your ProShop profile</a>
+                        <a class="text-secondary">Coupons</a>
+                        <a class="text-secondary">Language Preferences</a>
+                        <a class="text-secondary">Order Reports</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="card card-body">
+                        <h6 class="card-title h6 h6-sm">Shopping programs and rentals</h6>
+                        <hr>
+                        <a class="text-secondary" routerLink="/promotion">Promotions</a>
+                        <a class="text-secondary" routerLink="/shop">Shop with category</a>
+                        <a class="text-secondary">Purchase reminders</a>
+                        <br><br><br>
+                        <!-- <a>Your ProShop profile</a>
+                        <a>Coupons</a>
+                        <a>Language Preferences</a>
+                        <a>Order Reports</a> -->
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="card card-body">
+                        <h6 class="card-title h6 h6-sm">Other Programs</h6>
+                        <hr>
+                        <a class="text-secondary">Supplier Membership</a>
+                        <a class="text-secondary">Partner Program</a>
+                        <a class="text-secondary">Logistic Services</a>
+                        <a class="text-secondary">ProShop Blog</a>
+                        <a class="text-secondary">Policies and Rules</a>
+                        <a class="text-secondary">Report Abuse</a>
+                        <a class="text-secondary">Deals notifications</a>
+                        <a class="text-secondary">Your Interests</a>
+
+                    </div>
+                </div><br>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<!-- ---------------------------------------------Modal ----------------------------->
+<div id="abc">
+    <!-- Popup Div Starts Here -->
+    <div id="popupContact" class="col-xl-12">
+        <i class="fa fa-times" id="close" onclick="div_hideprofile()" aria-hidden="true"></i>
+        <h4>Change password</h4>
+        <hr>
+        <br>
+        <!-- Contact Us Form -->
+        <div class="first-form" id="first-form">
+            <form id="form" name="form" class="ecocash-form">
+
+
+                <br>
+                <input type="text" class="phone-number" placeholder="Enter password" id="account" name="phone"><br><br>
+                <input type="text" class="phone-number" placeholder="Confirm password" id="account" name="phone">
+                <br><br><br>
+
+
+            </form>
+            <div class="buttons">
+                <button class="cancel" onclick="div_hideprofile()">Cancel</button>
+                <button class="next" id="next" onclick="div_second()">Done</button>
+            </div>
+        </div>
+
+
+        <br> <br>
+
+
+    </div>
+    <!-- Popup Div Ends Here -->
+</div>
+<!-- -------------------------------------------------------------------------------- -->

@@ -1,0 +1,10 @@
+#img-fluid {
+    height: 400px;
+    width: 600px;
+    border: 1px solid grey;
+}
+
+#guide-button {
+    border-radius: 0;
+    width: 450px;
+}

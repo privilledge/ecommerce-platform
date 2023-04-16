@@ -1,0 +1,88 @@
+<body id="header">
+    <div class="py-1 bg-primary">
+        <div class="container">
+            <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+                <div class="col-lg-12 d-block">
+                    <div class="row d-flex">
+                        <div class="col-md pr-4 d-flex topper align-items-center">
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                            <span class="text">+263 78 529 5589</span>
+                        </div>
+                        <div class="col-md pr-4 d-flex topper align-items-center">
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-contact_mail"></span></div>
+                            <span class="text">info@ProShop.com</span>
+                        </div>
+                        <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                            <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" data-toggle="collapse" data-target=".navbar-collapse.show" id="ftco-navbar">
+
+        <a class="navbar-brand">
+            <img class="site-logo" src="assets/images/logo.jpg">
+            
+        </a>
+        <form class="search-form">
+
+            <div class="input-form">
+
+                <input type="search" placeholder="What do you want to buy?" class="search-input">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a routerLink="/" class="nav-link"><span class="icon-home mr-1"></span>Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon-shop mr-1"></span>Shop
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" routerLink="/shop">Shop</a>
+                        <a class="dropdown-item" routerLink="/wishlist">Wishlist</a>
+                        <a class="dropdown-item" routerLink="/promotion">Promotions</a>
+                        <a class="dropdown-item" routerLink="/cart">Cart</a>
+                        <a class="dropdown-item" routerLink="/checkout">Checkout</a>
+                    </div>
+                </li>
+                <ng-container *ngIf="showProflie">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon-shop mr-1"></span>{{userDetails.lastname}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" routerLink="/user-profile">Profile</a>
+                            <a class="dropdown-item" (click)="logout()">Logout</a>
+                        </div>
+                    </li>
+                </ng-container>
+                <ng-container *ngIf="showLogin">
+                    <li class="nav-item"><a routerLink="/login" class="nav-link"><span class="icon-user mr-1"></span>Login</a></li>
+                </ng-container>
+
+
+                <li class="nav-item cta cta-colored side-menu">
+                    <a routerLink="/cart" class="nav-link cart-link ">
+                        <span class="icon-shopping-cart icon-large">
+
+                        </span> [{{cartItemCount}}]
+
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- END nav -->
+</body>

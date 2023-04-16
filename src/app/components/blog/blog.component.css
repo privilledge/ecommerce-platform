@@ -1,0 +1,42 @@
+#subheader {
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    color: #fff;
+}
+
+#top-header {
+    font-weight: 500 !important;
+    font-size: 50px;
+    color: #fff;
+}
+
+
+/* /////////////////////////////// */
+
+.carousel-item {
+    height: 300px !important;
+}
+
+@media (max-width:1000px) {
+    #image {
+        height: 280px;
+    }
+}
+
+.view {
+    background-color: #444444;
+}
+
+#image {
+    object-fit: cover !important;
+    opacity: 0.5;
+}
+
+
+/* ////////////////////////////// */
+
+.mb-2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 50px;
+}

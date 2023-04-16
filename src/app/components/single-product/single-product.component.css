@@ -1,0 +1,35 @@
+.single-product-details {
+    box-shadow: 6px 6px 8px 6px rgba(22, 22, 26, 0.18);
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+}
+
+.product .img-fluid {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.product .img-prod {
+    text-align: center;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    padding: 0.4875rem 1rem !important;
+    background: #444444 !important;
+    color: #fefefe;
+    cursor: copy;
+    border-radius: 79% !important;
+}
+
+.my-pagination .ngx-pagination li {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+

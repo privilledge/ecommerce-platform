@@ -1,0 +1,95 @@
+<!-- <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+        <div class="view">
+
+            <img class="d-block w-100 " src="assets/images/images/banner1.jpg" id="image" alt="First slide">
+
+        </div>
+        <div class="carousel-caption">
+
+            <h1 class="mb-2">Wishlist</h1>
+
+            <br><br><br>
+
+        </div>
+
+    </div>
+</div> -->
+<ng-container *ngIf="product.length !=0">
+    <section class="ftco-section ftco-cart">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="cart-list">
+                        <table class="table">
+                            <thead class="thead-primary">
+                                <tr class="text-center">
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>Product name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center" *ngFor="let item of product; let i= index">
+                                    <td class="product-remove"><a><span (click)="removewishItem(item)" class="ion-ios-close"></span></a></td>
+
+                                    <td class="image-prod">
+                                        <div class="img" style="background-image:url({{item.image1}});"></div>
+                                    </td>
+
+                                    <td class="product-name">
+                                        <h3>{{item.name}}</h3>
+                                        <p style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 50ch;">{{item.description}}</p>
+                                    </td>
+
+                                    <td class="price">${{item.unit_price}}</td>
+
+                                    <td class="quantity">
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                                        </div>
+                                    </td>
+
+                                    <td class="total">{{item.unit_price}}</td>
+                                </tr>
+                                <!-- END TR-->
+
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td>
+                                        <button (click)="emptywish()" class="btn btn-danger">
+                                          Empty Wishlist
+                                      </button>
+                                    </td>
+
+                                    <td> <button routerLink="/shop" class="btn btn-success">Shop Now</button></td>
+                                    <td><strong>Grand Total: {{grandTotal}}</strong> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-container>
+
+<ng-container *ngIf="product.length ==0">
+    <div style="padding: 40px !important;" class="container">
+        <div class="center">
+            <div class="card">
+                <h5 class="card-title">My Wishlist</h5>
+            </div>
+            <img src="https:rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your Wishlist is empty</h4>
+            <h6>Add items to it now</h6>
+            <button routerLink="/shop" class="btn btn-primary">
+              Shop Now
+          </button>
+        </div>
+    </div>
+
+</ng-container>

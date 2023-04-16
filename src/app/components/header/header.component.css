@@ -1,0 +1,60 @@
+.site-logo {
+    height: 60px;
+    padding-left: 20px;
+}
+
+.nav-link,
+.dropdown-item {
+    cursor: pointer;
+}
+
+@media (max-width:1000px) {
+    form {
+        display: none !important;
+    }
+}
+
+.search-input {
+    width: 540px;
+    height: 35px;
+    border: none;
+    outline: 0px;
+    padding: 3px 0px 0px 10px;
+}
+
+.input-form {
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+}
+
+form {
+    display: flex;
+    border: 2px solid #444444;
+    margin-left: 8%;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.search-button {
+    width: 33px;
+    height: 35px;
+    border: none;
+    outline: 0px;
+    background-color: #444444;
+}
+
+#ftco-navbar {
+    border-bottom: 1px ridge whitesmoke !important;
+}
+
+.fa-search {
+    color: #fff;
+}
+
+#ftco-nav {
+    margin-left: 10px;
+}
+
+
+/* cart overlay */

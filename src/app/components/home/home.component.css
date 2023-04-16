@@ -1,0 +1,208 @@
+
+
+.card-img {
+    border-radius: 3px;
+    width: 100px;
+    height: 90px;
+}
+
+.card-image {
+    width: 80px;
+}
+
+.card-img:hover {
+    width: 98px;
+    height: 88px;
+}
+
+.inner-card {
+    border-radius: 3px;
+}
+
+.category-wrap {
+    background-color: #fff !important;
+}
+
+#secondcontainer-card {
+    box-shadow: 4px 4px 4px 4px rgba(22, 22, 26, 0.18) !important;
+}
+
+.products-container {
+    box-shadow: 8px 8px 8px 8px rgba(22, 22, 26, 0.18) !important;
+    margin: 30px;
+    background-color: white !important;
+}
+
+#inner-card-image {
+    width: 220px !important;
+    height: 160px;
+    padding: 5px;
+}
+
+#card-text-center {
+    border: none;
+    font-size: 13px !important;
+}
+
+.card-title-header {
+    color: rgb(0, 0, 0, .7) !important;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.card-title {
+    color: rgb(0, 0, 0, .8);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.view {
+    background-color: #444444;
+}
+
+s
+/* .card-title:hover {
+    color: #444444 !important;
+} */
+
+#card-title {
+    text-decoration: line-through;
+}
+
+#view-btn {
+    width: 500px !important;
+    border: none;
+    border-radius: 1px !important;
+    height: 40px;
+}
+
+#view-btn:hover {
+    border: 1px solid #000;
+}
+
+.img-prod {
+    height: 250px;
+}
+
+#prom-row {
+    margin: 0 20px 0 20px;
+}
+
+.deal-of-the-day .subheading,
+.deal-of-the-day .mb-4,
+.deal-of-the-day .p-deal,
+.deal-of-the-day .a-deal,
+.deal-of-the-day .price {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* Testimonies slide */
+
+.deals-header {
+    margin-left: 5%;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.heading-section {
+    justify-content: center;
+    text-align: center !important;
+}
+
+.testimony-card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+    width: 300px;
+    height: 380px;
+}
+
+.list-price {
+    font-size: 12px;
+}
+
+.add {
+    border-radius: 0 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .testimony-card img {
+        height: 11em;
+    }
+}
+
+@media (max-width: 868px) {
+    .user-img {
+        display: none !important;
+    }
+}
+
+
+/* ***************************************************************************** */
+
+.image {
+    position: relative;
+    display: inline-block;
+}
+
+.image:hover .edit {
+    display: block;
+}
+
+.edit {
+    position: absolute;
+    display: none;
+    background-color: #444444;
+    height: 30px;
+    width: 30px;
+    top: 0;
+}
+
+.edit a {
+    color: #fff;
+    font-size: 17px;
+}
+.marquee{
+    display:none !important;
+ }
+@media (max-width: 668px) {
+.marquee{
+   display:block !important;
+   margin-left:5%;
+}
+.slide-services{
+    visibility: hidden;
+    display: none;
+}
+}
+.time{
+    color:#fff !important;
+    text-align: center !important;
+    font-size: 30px;
+    font-weight: 600;
+}

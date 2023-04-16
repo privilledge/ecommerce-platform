@@ -1,0 +1,57 @@
+ .carousel-item {
+     height: 320px !important;
+ }
+
+ @media (max-width:1000px) {
+     #image {
+         height: 280px;
+     }
+ }
+
+ @media (max-width:1000px) {
+     #image {
+         height: 300px;
+     }
+     .map {
+         padding: 10px;
+         width: 240px;
+         height: 370px;
+     }
+ }
+
+ .view {
+     background-color: #444444;
+ }
+
+ #image {
+     object-fit: cover !important;
+     opacity: 0.5;
+ }
+
+ .router-link {
+     color: #fff;
+ }
+
+ .router-link:hover {
+     color: #444444;
+ }
+
+ .mb-2 {
+     color: #fff;
+     font-weight: 600;
+     font-size: 50px;
+ }
+
+ .info {
+     border: 1px solid lightgray;
+ }
+
+ .p-4 {
+     height: 150px !important;
+ }
+
+ .map {
+     padding: 10px;
+     width: 540px;
+     height: 570px;
+ }

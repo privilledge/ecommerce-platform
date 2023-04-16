@@ -1,0 +1,209 @@
+h6 {
+    color: black !important;
+}
+
+.icon {
+    width: 30% !important;
+    border: none;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: 40px !important;
+}
+
+a {
+    text-decoration: underline !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.link-text {
+    font-size: 16px !important;
+    text-decoration: none!important;
+    color: #000 !important;
+}
+
+a:hover {
+    color: #ffae42 !important;
+    cursor: pointer;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+.user-name {
+    margin-left: 15% !important;
+}
+
+.ml-3 {
+    text-decoration: none !important;
+}
+
+span {
+    display: inline-flex;
+    padding: .2em;
+    height: 2em;
+}
+
+#file {
+    display: none;
+    color: transparent;
+    transition: all .3s ease;
+    position: relative;
+    transition: all .3s ease;
+}
+
+
+/* ---------------------------------Modal---------------------------------- */
+
+#close {
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    cursor: pointer
+}
+
+@media (max-width:1000px) {
+    div#popupContact {
+        left: 2% !important;
+        top: 15%;
+        width: 89% !important;
+    }
+    .phone-number {
+        width: 200px !important;
+    }
+    .input-label {
+        padding-left: 5px;
+    }
+    .card {
+        margin-bottom: 100px !important;
+        padding-left: 0 !important;
+    }
+}
+
+div#popupContact {
+    text-align: center;
+    top: 27%;
+    left: 35%;
+    font-family: 'Raleway', sans-serif;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 4px rgb(248, 248, 250, 0.1) !important;
+    background-attachment: fixed !important;
+    position: relative !important;
+}
+
+#name {
+    background-repeat: no-repeat;
+    background-position: 5px 7px
+}
+
+#abc {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #313140 !important;
+    overflow: hidden;
+    background-attachment: fixed !important;
+    bottom: 0px;
+}
+
+.input-label {
+    float: left !important;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.cancel {
+    float: left;
+    margin-left: 40px;
+    background-color: #444444;
+    color: #fff;
+    border: none;
+    width: 70px;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+}
+
+.next {
+    float: right;
+    margin-right: 40px;
+    background-color: #444444;
+    color: #fff !important;
+    border: none;
+    width: 70px;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+}
+
+#second-form form {
+    text-align: left !important;
+    margin-left: 16px;
+}
+
+.form-control:focus {
+    box-shadow: 10px 0px 0px 0px #ffffff !important;
+}
+
+
+/* -------------------------Profile Pic-------------------------- */
+
+.profile-pic {
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin-left: 31%;
+}
+
+.profile-pic input {
+    display: none;
+}
+
+.profile-pic img {
+    position: absolute;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    z-index: 0;
+}
+
+.profile-pic .-label {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+}
+
+.profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    color: #fafafa;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 100px;
+    margin-bottom: 0;
+}
+
+.profile-pic span {
+    display: inline-flex;
+    padding: 0.2em;
+    height: 2em;
+}
+
+.hover-text {
+    font-size: 12px !important;
+}

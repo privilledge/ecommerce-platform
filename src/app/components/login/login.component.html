@@ -1,0 +1,30 @@
+<div class="row">
+
+    <section class="container min-container py-md-5 mt-4">
+        <div class="card-panel p-sm-5 position-relative">
+            <div class="text-center">
+                <h1 class="">ProShop</h1>
+
+            </div>
+            <form id="loginForm" class="mt-5">
+                <p class="small mb-2 text-scarlet"></p>
+                <div class="form-group position-relative">
+                    <label for="email" class="sr-only">Email</label>
+                    <input class="form-control input-lg rounded-0" id="email" type="text" placeholder="Email" [(ngModel)]="user.email" name="email" required>
+                    <i class="fa fa-user fa-lg position-absolute"></i>
+                </div>
+
+                <label for="password" class="pull-left sr-only">Password</label>
+                <div class="position-relative">
+                    <input class="form-control input-lg rounded-0" id="password" type="password" placeholder="Password" required [(ngModel)]="user.password" name="password">
+                    <i class="fa fa-lock fa-lg position-absolute"></i>
+                </div>
+                <div class="text-center my-4">
+                    <button type="submit" class="btn btn-primary text-white btn-lg text-uppercase" (click)="loginUser()">Log in</button>
+                </div>
+                <p>Don't Have An Account Yet?<a routerLink="/registration" style="color:#444444" class="signup-link">Sign up</a>.</p>
+
+            </form>
+        </div>
+
+    </section>

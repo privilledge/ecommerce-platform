@@ -1,0 +1,361 @@
+<div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+        <div class="view">
+
+            <img class="d-block w-100 " src="assets/images/images/banner1.jpg" id="image" alt="First slide">
+
+        </div>
+        <div class="carousel-caption">
+
+            <h1 class="mb-2" >Checkout</h1>
+            <br><br>
+
+        </div>
+
+    </div>
+</div>
+<section class="ftco-section" id="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 ">
+                <form action="#" class="billing-form">
+                    <h3 class="mb-4 billing-heading">Billing Details </h3>
+                    <select name="" id="currentDate">
+                        <option> {{todayWithPipe}}</option>
+                    </select>
+                    <div class="row align-items-end">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstname">First Name</label>
+                                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="userDetails.firstname" disabled >
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" [(ngModel)]="userDetails.lastname"  name="lastname" disabled>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="country">State / Country</label>
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="" id="" class="form-control">
+                  <option value="">Zimbabwe</option>
+                  <option value="">South Africa</option>
+                  <option value="">Botswana</option>
+                  <option value="">Mozambique</option>
+                  <option value="">Malawi</option>
+                  <option value="">Namibia</option>
+                </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="streetaddress">Street Address</label>
+                                <input type="text" class="form-control" placeholder="Address Line 1" id="address" (change)="getAddress()" [(ngModel)]="payment.billingline1" name="billingline1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address Line 2 (optional)" id="addressLine2" [(ngModel)]="payment.billingline2" name="billingline2">
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="towncity">Town / City</label>
+                                <input type="text" class="form-control" placeholder="" [(ngModel)]="payment.billingcity" name="billingcity">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="postcodezip">Province</label>
+                                <input type="text" class="form-control" placeholder="province" [(ngModel)]="payment.billingprovince" name="billingprovince">
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" placeholder="" [(ngModel)]="userDetails.phone"  name="phone" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="emailaddress">Email Address</label>
+                                <input type="text" class="form-control" id="userEmail" (change)="getEmail()"[(ngModel)]="userDetails.email"  name="email" disabled>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-12">
+                            <div class="form-group mt-4">
+                                <div class="radio">
+                                    <label class="mr-3"><input type="radio" name="optradio"> Create an Account? </label>
+                                    <label><input type="radio" name="optradio"> Ship to different address</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- END -->
+            </div>
+            <div class="col-xl-5">
+                <div class="row mt-5 pt-3">
+                    <div class="col-md-12 d-flex mb-5">
+                        <div class="cart-detail cart-total p-3 p-md-4">
+                            <h3 class="billing-heading mb-4">Cart Total</h3>
+                            <p class="d-flex">
+                                <span>Subtotal</span>
+                                <span>${{gTotal}}</span>
+                            </p>
+                            <p class="d-flex">
+                                <span>Delivery</span>
+                                <span>${{delivery}}</span>
+                            </p>
+                            <p class="d-flex">
+                                <span>Discount</span>
+                                <span>${{discount}}</span>
+                            </p>
+                            <hr>
+                            <p class="d-flex total-price">
+                                <span>Total</span>
+                                <span>${{gTotal}}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="cart-detail p-3 p-md-4">
+                            <h3 class="billing-heading mb-4">Payment Method</h3>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" class="mr-2" id="ecocash" value="eco">Ecocash</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" class="mr-2"  id="onemoney" value="onemoney"> OneMoney</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" class="mr-2"  id="visa" value="cards"> Mastercard/Visa card</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="abc">
+                                <!-- Popup Div Starts Here -->
+                                <div id="popupContact" class="col-xl-12">
+                                    <i class="fa fa-times" id="close" onclick="div_hide()" aria-hidden="true"></i>
+                                    <h2>Ecocash</h2>
+                                    <hr>
+                                    <br>
+                                    <!-- Contact Us Form -->
+                                    <div class="first-form" id="first-form">
+                                        <form id="form" name="form" class="ecocash-form">
+
+                                            <label class="input-label">
+                                        Enter ecocash number to complete transaction
+                                        <br>
+                                       <input type="text" class="phone-number" id="account" name="phone" (change)="getAccount()">
+                                     </label>
+                                            <br><br><br>
+
+
+                                        </form>
+                                        <div class="buttons">
+                                            <button class="cancel" onclick="div_hide()">Cancel</button>
+                                            <button class="next" id="next" onclick="div_second()">Next</button>
+                                        </div>
+                                    </div>
+                                    <div id="second-form">
+                                        <form id="form" name="form" class="ecocash-form">
+
+                                            <label>Email Address : {{this.email}}</label><br>
+                                            <label>Shipping Address :{{this.address}}</label><br>
+                                            <label>Payment Method :  Ecocash</label><br>
+                                            <label>Account : {{this.acc}}</label><br>
+                                            <label>Total Amount:</label>
+
+
+                                            <br>
+
+
+                                        </form>
+                                        <div class="buttons">
+                                            <button class="cancel" onclick="div_first()">Previous</button>
+                                            <button id="next" class="next" onclick="div_third()">Next</button>
+                                        </div>
+                                    </div>
+                                    <div id="third-form">
+                                        <form id="form" name="form" class="ecocash-form">
+                                            <label>Waiting for mobile payment from {{this.acc}}.</label><br>
+                                            <label>You should receive a prompt on your handset if not dial</label><br>
+                                            <h5>*151*2*4#</h5>
+                                            <br>
+
+                                        </form>
+                                        <div class="buttons">
+                                            <button class="cancel" onclick="div_second()">Previous</button>
+                                            <button id="next" class="next" onclick="div_hide()">Done</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                                </div>
+                                <!-- Popup Div Ends Here -->
+                            </div>
+                            <div id="efg">
+                                <!-- Popup Div Starts Here -->
+                                <div id="popupContact" class="col-xl-12">
+                                    <i class="fa fa-times" id="close" onclick="div_hide()" aria-hidden="true"></i>
+                                    <h2>Onemoney</h2>
+                                    <hr>
+                                    <br>
+                                    <!-- Contact Us Form -->
+                                    <div class="first-form" id="onemoney-first-form">
+                                        <form id="form" name="form" class="ecocash-form">
+
+                                            <label class="input-label">
+                                      Enter onemoney number to complete transaction
+                                      <br>
+                                     <input type="text" class="phone-number" id="onemoney-account" name="phone">
+                                   </label>
+                                            <br><br><br>
+
+
+                                        </form>
+                                        <div class="buttons">
+                                            <button class="cancel" onclick="div_hide()">Cancel</button>
+                                            <button class="next" id="next" onclick="div_onemoney()">Next</button>
+                                        </div>
+                                    </div>
+                                    <div id="onemoney-second-form">
+                                        <form id="form" name="form" class="ecocash-form">
+
+                                            <label>Email Address : {{this.email}}</label><br>
+                                            <label>Shipping Address :{{this.address}}</label><br>
+                                            <label>Payment Method : OneMoney</label><br>
+                                            <label>Account : {{this.acc}}</label><br>
+                                            <label>Total Amount:</label>
+
+                                            <br>
+
+
+                                        </form>
+                                        <div class="buttons">
+                                            <button class="cancel" onclick="div_onemoney3()">Previous</button>
+                                            <button id="next" class="next" onclick="div_onemoney2()">Next</button>
+                                        </div>
+                                    </div>
+                                    <div id="onemoney-third-form">
+                                        <form id="form" name="form" class="ecocash-form">
+                                            <label>Waiting for mobile payment from {{this.acc}}</label><br>
+                                            <label>You should receive a prompt on your handset if not dial</label><br>
+                                            <h5>*151*2*4#</h5>
+                                            <br>
+
+                                        </form>
+                                        <div class="buttons">
+                                            <button class="cancel" onclick="div_onemoney()">Previous</button>
+                                            <button id="next" class="next" onclick="div_hide()">Done</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                                </div>
+                                <!-- Popup Div Ends Here -->
+                            </div>
+                            <div id="hij">
+
+
+                                <div id="popupContact" class="col-xl-12 mastercard">
+                                    <i class="fa fa-times" id="close" onclick="div_hide()" aria-hidden="true"></i>
+                                    <div class="row">
+                                        <div class="justify-content-center">
+                                            <div class="col-sm-8 col-md-6 col-lg-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="row">
+                                                            <div class="col-md-6"> <span>Mastercard/Visa card</span>
+                                                            </div>
+                                                            <div class="col-md-6 text-right" style="margin-top: -5px;">
+                                                                <img src="https://img.icons8.com/color/36/000000/visa.png">
+                                                                <img src="https://img.icons8.com/color/36/000000/mastercard.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body" style="height: 350px">
+                                                        <div class="form-group">
+                                                            <label for="cc-number" class="control-label">CARD NUMBER</label>
+                                                            <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required [(ngModel)]="payment.cardnumber" name="cardnumber">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="numeric" class="control-label">CARD HOLDER NAME</label>
+                                                            <input type="text" class="input-lg form-control" placeholder="card holder name" [(ngModel)]="payment.cardname" name="cardname">
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="cc-exp" class="control-label">CARD EXPIRY</label>
+                                                                    <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="••••" required [(ngModel)]="payment.cardexpiry" name="cardexpiry">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="cc-cvc" class="control-label">CARD CVC</label>
+                                                                    <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required [(ngModel)]="payment.cardcvv" name="cardcvv">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button class="cancel" onclick="div_hide()">Cancel</button>
+                                        <button class="payment" (click)="makePayment()">Make payment</button>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                                </div>
+
+
+
+
+                                <!-- Popup Div Ends Here -->
+                            </div>
+                            <p><a class="btn btn-primary py-3 px-4" id="popup" onclick="div_show()">Place an order</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .col-md-8 -->
+        </div>
+    </div>
+</section>
+<!-- .section -->

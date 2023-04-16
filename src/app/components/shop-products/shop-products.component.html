@@ -1,0 +1,32 @@
+<div class="row">
+    <ng-container *ngFor="let item of productList">
+        <div class="col-md-6 col-lg-3 ">
+            <div class="product">
+                <a class="img-prod"><img class="img-fluid" src="{{item.image1}}" alt="">
+                    <div class="overlay"></div>
+                </a>
+                <div class="text py-3 pb-4 px-3 text-center">
+                    <h3><a>{{item.name}}</a></h3>
+                    <div class="d-flex">
+                        <div class="pricing">
+                            <p class="price"><span>${{item.unit_price}}</span></p>
+                        </div>
+                    </div>
+                    <div class="bottom-area d-flex px-3">
+                        <div class="m-auto d-flex">
+                            <a class="add-to-cart d-flex justify-content-center align-items-center text-center" (click)="viewProduct(item.id)">
+                                <span><i class="ion-ios-menu"></i></span>
+                            </a>
+                            <a class="buy-now d-flex justify-content-center align-items-center mx-1" (click)=addtoCart(item.id)>
+                                <span><i   class="ion-ios-cart"></i></span>
+                            </a>
+                            <a class="heart d-flex justify-content-center align-items-center ">
+                                <span><i (click)=addToWish(item.id) class="ion-ios-heart"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

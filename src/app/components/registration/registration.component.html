@@ -1,0 +1,77 @@
+<section class="container min-container py-md-5 mt-4">
+    <div class="card-panel p-sm-5 position-relative">
+        <div class="text-center">
+            <h1 class="">ProShop</h1>
+
+        </div>
+        <br>
+        <p class="small mb-2 text-scarlet"></p>
+        <form matInput (ngSubmit)="registerUser()">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="First name" [(ngModel)]="user.firstname" name="firstname">
+
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" [(ngModel)]="user.lastname" name="lastname">
+
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group position-relative">
+                <label for="email" class="sr-only">Email</label>
+                <input class="form-control input-lg rounded-0" id="email" name="email" type="text" placeholder="Email" [(ngModel)]="user.email" #email>
+                <i class="fa fa-user fa-lg position-absolute"></i>
+
+            </div>
+
+            <!----------------------------------------------------------------------------------->
+
+            <div class="form-group">
+                <label for="inputAddress2" id="address-header">Address:</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Street Address">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+
+                    <input type="text" class="form-control" placeholder="City" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+
+                    <select id="inputState" class="form-control">
+                    <option selected>State</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+
+                    <input type="text" class="form-control" placeholder="Zip code" id="inputZip">
+                </div>
+            </div>
+
+
+
+            <!----------------------------------------------------------------------------------->
+
+            <div class="position-relative">
+                <label for="password" class="pull-left sr-only">Password</label>
+                <input class="form-control input-lg rounded-0" id="password" name="password" type="password" placeholder="Password" [(ngModel)]="user.password" name="password">
+                <i class="fa fa-lock fa-lg position-absolute"></i>
+            </div><br>
+
+            <div class="position-relative">
+                <label for="password" class="pull-left sr-only">Password</label>
+                <input class="form-control input-lg rounded-0" id="pwd2" name="password" type="password" placeholder="Confirm password" required="">
+                <i class="fa fa-lock fa-lg position-absolute"></i>
+            </div><br>
+
+            <div class="text-center my-4 buttons">
+                <button class="btn btn-danger text-white btn-lg text-uppercase" routerLink="/">Cancel</button> &nbsp;
+                <button class="btn btn-primary text-white btn-lg text-uppercase" id="reg" type="submit">Sign Up</button>
+
+            </div>
+
+        </form>
+    </div>
+</section>

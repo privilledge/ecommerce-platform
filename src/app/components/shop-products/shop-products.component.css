@@ -1,0 +1,11 @@
+.product .img-fluid {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.product .img-prod{
+    text-align: center;   
+}

@@ -1,0 +1,86 @@
+<br>
+<ng-container *ngIf="showItems">
+    <div id="cartTable">
+        <section class="ftco-section ftco-cart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="cart-list">
+                            <table class="table">
+                                <thead class="thead-primary">
+                                    <tr class="text-center">
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                        <th>Product name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-center" *ngFor="let item of cart; let i= index">
+                                        <td class="product-remove"><a><span (click)="removeItem(item)" class="ion-ios-close"></span></a></td>
+    
+                                        <td class="image-prod">
+                                            <div class="img" style="background-image:url({{item.product.image1}});"></div>
+                                        </td>
+    
+                                        <td class="product-name">
+                                            <h3>{{item.product.name}}</h3>
+                                            <p style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 50ch;">{{item.product.description}}</p>
+                                        </td>
+    
+                                        <td class="price">${{item.product.unit_price}}</td>
+    
+                                        <td class="quantity">
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="quantity" class="quantity form-control input-number" value="{{item.qty}}" min="1" max="100">
+                                            </div>
+                                        </td>
+                                        
+                                        <td class="total">{{item.total}} </td>
+                                    </tr>
+                                    <!-- END TR-->
+    
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td>
+                                            <button (click)="emptycart()" class="btn btn-danger">
+                                                Empty Cart
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button routerLink="/shop" class="btn btn-primary">
+                                                Shop More
+                                            </button>
+                                        </td>
+                                        <td> <button routerLink="/checkout" class="btn btn-success">Checkout</button></td>
+                                        <td><strong>Grand Total: {{gTotal}}</strong> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
+</ng-container>
+
+<ng-container *ngIf="showNone">
+    <div class="container">
+
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https:rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty</h4>
+            <h6>Add items to it now</h6>
+            <button routerLink="/shop" class="btn btn-primary">
+                Shop Now
+            </button>
+        </div>
+    </div>
+
+</ng-container>
